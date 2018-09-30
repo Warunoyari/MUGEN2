@@ -6,7 +6,8 @@ enum DataType
     Integer,
     Double,
     IfElse,
-    Conditional
+    Conditional,
+    String,
 };
 
 enum PlayerIntDataIndex
@@ -20,6 +21,14 @@ enum PlayerIntDataIndex
     Defence,
     VelX,
     VelY
+};
+
+enum MathType
+{
+    Plus,
+    Subtract,
+    Divide,
+    Multiply
 };
 
 #endif
