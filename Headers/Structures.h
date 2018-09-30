@@ -11,11 +11,13 @@ struct DataPointer
 
 struct MathExpression
 {
-    const DataPointer A;
-    const DataPointer B;
-    MathType MATH;
-    MathExpression(const DataPointer x, const DataPointer y, MathType z) :
-    A(x), B(y), MATH(z) {}
+    const void* Left;
+    const void* Right;
+    const DataType LeftType;
+    const DataType RightType;
+    MathType MATH;    
+    MathExpression(const void* a, const void* b, const DataType Left, const DataType Right, const MathType m) 
+    : Left(a), Right(b), LeftType(Left), RightType(Right), MATH(m) {}
 };
 
 #endif
