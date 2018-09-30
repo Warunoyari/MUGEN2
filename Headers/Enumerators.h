@@ -31,4 +31,25 @@ enum MathType
     Multiply
 };
 
+enum MathTypeAlternate
+{
+    IIA,
+    IDA,
+    DIA,
+    DDA,
+    IIS,
+    IDS,
+    DIS,
+    DDS,
+    IID,
+    IDD,
+    DID,
+    DDD,
+    IIM,
+    IDM,
+    DIM,
+    DDM,
+};
+
+
 #endif

@@ -20,4 +20,13 @@ struct MathExpression
     : Left(a), Right(b), LeftType(Left), RightType(Right), MATH(m) {}
 };
 
+struct MathExpressionAlternate
+{
+    const void* Left;
+    const void* Right;
+    MathTypeAlternate MATH;
+    MathExpressionAlternate(const void* a, const void* b, const MathTypeAlternate m)
+        : Left(a), Right(b), MATH(m) {}
+};
+
 #endif
