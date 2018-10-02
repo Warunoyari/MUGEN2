@@ -5,12 +5,14 @@ enum DataType
 {
     Integer,
     Double,
+    Boolean,
     IfElse,
     Conditional,
     String,
+    VoidPointer
 };
 
-enum PlayerIntDataIndex
+enum PlayerDataIndex
 {
     PlayerAddress,
     LifeMax,
@@ -30,26 +32,5 @@ enum MathType
     Divide,
     Multiply
 };
-
-enum MathTypeAlternate
-{
-    IIA,
-    IDA,
-    DIA,
-    DDA,
-    IIS,
-    IDS,
-    DIS,
-    DDS,
-    IID,
-    IDD,
-    DID,
-    DDD,
-    IIM,
-    IDM,
-    DIM,
-    DDM,
-};
-
 
 #endif

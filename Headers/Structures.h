@@ -1,32 +1,27 @@
 #ifndef STRUCTURES_H
 #define STRUCTURES_H
 
-struct DataPointer
+class NumberData;
+typedef NumberData&(*MathFunctionPointer)(NumberData &a, NumberData &b, NumberData &result);
+class NumberData
 {
-    void* Data;
-    DataType Type;
-    DataPointer(void* A, DataType B) : Data(A), Type(B) {}
-    DataPointer() : Data(static_cast<void*>(this)), Type(Integer) {}
-};
+public:
+    DataType NumType;
+    MathFunctionPointer NextMath;
+    union
+    {        
+        int i;
+        double d;
+        bool b;
+        std::string s;
+        void* vp;
+    };
+    NumberData(DataType X) : NumType(X) {}
+    NumberData() {}
+    ~NumberData() {}
+    MathFunctionPointer DeriveNextMath()
+    {
 
-struct MathExpression
-{
-    const void* Left;
-    const void* Right;
-    const DataType LeftType;
-    const DataType RightType;
-    MathType MATH;    
-    MathExpression(const void* a, const void* b, const DataType Left, const DataType Right, const MathType m) 
-    : Left(a), Right(b), LeftType(Left), RightType(Right), MATH(m) {}
+    }
 };
-
-struct MathExpressionAlternate
-{
-    const void* Left;
-    const void* Right;
-    MathTypeAlternate MATH;
-    MathExpressionAlternate(const void* a, const void* b, const MathTypeAlternate m)
-        : Left(a), Right(b), MATH(m) {}
-};
-
 #endif
